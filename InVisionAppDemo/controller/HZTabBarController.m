@@ -26,13 +26,13 @@
 
 - (void)addAllChildViewControllers {
     HZLaunchPadViewController *launchPad = [[HZLaunchPadViewController alloc] init];
-    [self addOneChildVc:launchPad title:@"LAUNCHPAD" imageName:@"tabbar_home"];
+    [self addOneChildVc:launchPad title:@"LAUNCHPAD" imageName:@"lanuchpad_tabbar_icon"];
     
     HZMyProjectsViewController *myProject = [[HZMyProjectsViewController alloc] init];
-    [self addOneChildVc:myProject title:@"MY PROJECTS" imageName:@"tabbar_message_center"];
+    [self addOneChildVc:myProject title:@"MY PROJECTS" imageName:@"myprojects_tabbar_icon"];
     
     UIViewController *compose = [[UIViewController alloc] init];
-    [self addOneChildVc:compose title:@"COMPOSE" imageName:@"tabbar_compose_icon_add_highlighted@2x"];
+    [self addOneChildVc:compose title:@"COMPOSE" imageName:@"tabbar_compose_icon_add_highlighted"];
     
     UIViewController *discover = [[UIViewController alloc] init];
     [self addOneChildVc:discover title:@"DISCOVERY" imageName:@"tabbar_discover"];
@@ -44,12 +44,6 @@
 + (void)initialize {
     [[UITabBar appearance] setTintColor:[UIColor colorWithRed:245/255.0 green:7/255.0 blue:67/255.0 alpha:1.0]];
 }
-
-//- (void)viewWillAppear:(BOOL)animated {
-//    for (UITabBarItem *tabBarItem in self.tabBar.items) {
-//        tabBarItem.titlePositionAdjustment = UIOffsetMake(0, 10);
-//    }
-//}
 
 - (void)addOneChildVc:(UIViewController *)childVc
                 title:(NSString *)title
