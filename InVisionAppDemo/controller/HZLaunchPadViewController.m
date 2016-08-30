@@ -18,6 +18,7 @@ UICollectionViewDelegateFlowLayout
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSArray *imageArray;
+@property (nonatomic, strong) UILabel *titleLabel;
 @end
 
 @implementation HZLaunchPadViewController
@@ -36,6 +37,10 @@ UICollectionViewDelegateFlowLayout
                         @"twitter",
                         @"wechat",
                         @"wechattimeline"];
+    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 60, 30)];
+    self.titleLabel.font = [UIFont boldSystemFontOfSize:18];
+    self.titleLabel.text = @"LAUNCHPAD";
+    self.navigationItem.titleView = self.titleLabel;
     //1.初始化layout
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     //设置headerView的尺寸大小
@@ -48,14 +53,41 @@ UICollectionViewDelegateFlowLayout
     collectionView.delegate = self;
     collectionView.dataSource = self;
     [self.view addSubview:collectionView];
-    
+    self.collectionView = collectionView;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+                         self.navigationItem.titleView.transform = CGAffineTransformMakeTranslation(-10, 0);
+    [UIView animateWithDuration:0.5
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         self.navigationItem.titleView.transform = CGAffineTransformMakeTranslation(0, 0);
+                     } completion:^(BOOL finished) {
+                         
+                     }];
+    [self collectionViewDisplayCellAnimaition];
 }
 
+- (void)collectionViewDisplayCellAnimaition {
+    for (int i = 0 ;i < self.collectionView.visibleCells.count; i++) {
+        HZLanuchCollectionViewCell *cell = self.collectionView.visibleCells[i];
+        CGFloat cellY = cell.frame.origin.y;
+        int rowCount = (int)((cellY - 30) / 130);
+        cell.transform = CGAffineTransformMakeTranslation(0, rowCount * 30);
+        
+        [UIView animateWithDuration:0.7
+                              delay:0
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+                             cell.transform = CGAffineTransformMakeTranslation(0, 0);
+                         } completion:nil];
+        
+    }
+}
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.imageArray.count;
@@ -66,7 +98,6 @@ UICollectionViewDelegateFlowLayout
                                                                                                                forIndexPath:indexPath];
     [cell.imageView setImage:[UIImage imageNamed:self.imageArray[indexPath.row]]];
     cell.titleLabel.text = self.imageArray[indexPath.row];
-    
     return cell;
 }
 
@@ -97,11 +128,11 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
 }
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row >= 3) {
+//    if (indexPath.row >= 3) {
         int rowCount = (int)(indexPath.row / 3);
         cell.transform = CGAffineTransformMakeTranslation(0, rowCount * 30);
         
-        [UIView animateWithDuration:0.5
+        [UIView animateWithDuration:0.7
                               delay:0
                             options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
@@ -109,7 +140,7 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
                          } completion:^(BOOL finished) {
                              
                          }];
-    }
+//    }
 }
 
 @end

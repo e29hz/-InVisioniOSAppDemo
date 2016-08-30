@@ -26,7 +26,7 @@
 
 - (void)addAllChildViewControllers {
     HZLaunchPadViewController *launchPad = [[HZLaunchPadViewController alloc] init];
-    [self addOneChildVc:launchPad title:@"LAUNCHPAD" imageName:@"lanuchpad_tabbar_icon"];
+    [self addOneChildVc:launchPad title:@"" imageName:@"lanuchpad_tabbar_icon"];
     
     HZMyProjectsViewController *myProject = [[HZMyProjectsViewController alloc] init];
     [self addOneChildVc:myProject title:@"MY PROJECTS" imageName:@"myprojects_tabbar_icon"];
