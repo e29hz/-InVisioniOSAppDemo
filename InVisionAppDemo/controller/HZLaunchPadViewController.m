@@ -128,19 +128,17 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
 }
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
-//    if (indexPath.row >= 3) {
-        int rowCount = (int)(indexPath.row / 3);
-        cell.transform = CGAffineTransformMakeTranslation(0, rowCount * 30);
-        
-        [UIView animateWithDuration:0.7
-                              delay:0
-                            options:UIViewAnimationOptionCurveEaseInOut
-                         animations:^{
-                             cell.transform = CGAffineTransformMakeTranslation(0, 0);
-                         } completion:^(BOOL finished) {
-                             
-                         }];
-//    }
+    int rowCount = (int)(indexPath.row / 3);
+    cell.transform = CGAffineTransformMakeTranslation(0, rowCount * 30);
+    
+    [UIView animateWithDuration:0.7
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         cell.transform = CGAffineTransformMakeTranslation(0, 0);
+                     } completion:^(BOOL finished) {
+                         
+                     }];
 }
 
 @end
