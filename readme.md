@@ -1,22 +1,18 @@
-# Mobile Blog App Interaction
-## 简介：一个以Blog为原型的交互设计
-* 原作者：[Ghani Pradita](https://dribbble.com/ghanipradita)
-* 原地址：[Dribbble](https://dribbble.com/shots/2264582-Mobile-Blog-App-Interaction)
+# InVision iOS App Demo
+## 简介：iOS 交互设计Demo
+* 原作者：[Charles Patterson](https://dribbble.com/CharlesPatterson)
+* 原地址：[Dribbble](https://dribbble.com/shots/2291430-InVision-iOS-App)
 * 设计原型：
-  ![Mobile Blog App Interaction Prototype Demo](https://github.com/e29hz/HZUserExperienceDemo/blob/master/UE.gif?raw=true)
+  ![InVision iOS App](https://d13yacurqjgara.cloudfront.net/users/121337/screenshots/2291430/invision.gif)
 
 ## 实现部分 
-* 1.首页跳转详情页动画
-* 2.详情页侧滑
-* 3.评论界面转场以及cell动画
-
-## 不同之处
-* 1.首页cell扩展速度较快
-* 2.侧滑动画略有不同
-* 3.评论界面较简陋
+* 1.首页 cell 的动画
+* 2.tabbar view 切换动画
+* 3.view 的标题动画
+* 4.个人信息的侧滑出现动画以及 view 中的table view cell 的出现动画
 
 ## 已知问题
-* 首页被点击cell会有轻微抖动
+* my projects view 消失时标题栏动画未实现
 
 ## Demo展示 
 ![Demo](https://github.com/e29hz/HZUserExperienceDemo/blob/master/2016-08-29%2018_42_19.gif?raw=true)
