@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E438A3C71D76B8190009978A /* HZProfileSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = E438A3C61D76B8190009978A /* HZProfileSlideView.m */; };
+		E438A3C91D76B8360009978A /* HZProfileSildeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E438A3C81D76B8360009978A /* HZProfileSildeView.xib */; };
+		E438A3CB1D76B9610009978A /* e29hz.png in Resources */ = {isa = PBXBuildFile; fileRef = E438A3CA1D76B9610009978A /* e29hz.png */; };
+		E438A3CD1D76BAFC0009978A /* in_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E438A3CC1D76BAFC0009978A /* in_icon@2x.png */; };
+		E438A3D01D76CAA50009978A /* HZTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E438A3CF1D76CAA50009978A /* HZTabBar.m */; };
+		E438A3D31D76CC100009978A /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E438A3D21D76CC100009978A /* UIView+Extension.m */; };
 		E4BDCD671D75287900973854 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BDCD661D75287900973854 /* main.m */; };
 		E4BDCD6A1D75287900973854 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BDCD691D75287900973854 /* AppDelegate.m */; };
 		E4BDCD721D75287900973854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4BDCD711D75287900973854 /* Assets.xcassets */; };
@@ -40,6 +46,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E438A3C51D76B8190009978A /* HZProfileSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZProfileSlideView.h; sourceTree = "<group>"; };
+		E438A3C61D76B8190009978A /* HZProfileSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZProfileSlideView.m; sourceTree = "<group>"; };
+		E438A3C81D76B8360009978A /* HZProfileSildeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HZProfileSildeView.xib; sourceTree = "<group>"; };
+		E438A3CA1D76B9610009978A /* e29hz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = e29hz.png; sourceTree = "<group>"; };
+		E438A3CC1D76BAFC0009978A /* in_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "in_icon@2x.png"; sourceTree = "<group>"; };
+		E438A3CE1D76CAA50009978A /* HZTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZTabBar.h; sourceTree = "<group>"; };
+		E438A3CF1D76CAA50009978A /* HZTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZTabBar.m; sourceTree = "<group>"; };
+		E438A3D11D76CC100009978A /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		E438A3D21D76CC100009978A /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		E4BDCD621D75287900973854 /* InVisionAppDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InVisionAppDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4BDCD661D75287900973854 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E4BDCD681D75287900973854 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -155,7 +170,8 @@
 		E4F4D2C41D7530640078B991 /* resource */ = {
 			isa = PBXGroup;
 			children = (
-				E4F4D2E71D7579D20078B991 /* LanuchPad */,
+				E438A3CC1D76BAFC0009978A /* in_icon@2x.png */,
+				E438A3CA1D76B9610009978A /* e29hz.png */,
 				E4F4D2E01D7562D10078B991 /* lanuchpad_tabbar_icon@2x.png */,
 				E4F4D2E21D75637E0078B991 /* myprojects_tabbar_icon@2x.png */,
 				E4F4D2C51D7530640078B991 /* IMG_2624.png */,
@@ -166,6 +182,7 @@
 				E4F4D2CA1D7530640078B991 /* tabbar_message_center@2x.png */,
 				E4F4D2CB1D7530640078B991 /* tabbar_profile@2x.png */,
 				E4F4D2CC1D7530640078B991 /* Wyue-GutiFangsong-NC_deliverable.otf */,
+				E4F4D2E71D7579D20078B991 /* LanuchPad */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -173,6 +190,8 @@
 		E4F4D2CD1D7530640078B991 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				E438A3D11D76CC100009978A /* UIView+Extension.h */,
+				E438A3D21D76CC100009978A /* UIView+Extension.m */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -182,6 +201,11 @@
 			children = (
 				E4F4D2E41D75666D0078B991 /* HZLanuchCollectionViewCell.h */,
 				E4F4D2E51D75666D0078B991 /* HZLanuchCollectionViewCell.m */,
+				E438A3C51D76B8190009978A /* HZProfileSlideView.h */,
+				E438A3C61D76B8190009978A /* HZProfileSlideView.m */,
+				E438A3C81D76B8360009978A /* HZProfileSildeView.xib */,
+				E438A3CE1D76CAA50009978A /* HZTabBar.h */,
+				E438A3CF1D76CAA50009978A /* HZTabBar.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -270,8 +294,11 @@
 				E4F4D2F51D7579D20078B991 /* facebook@2x.png in Resources */,
 				E4F4D2FF1D7579D20078B991 /* wechattimeline@2x.png in Resources */,
 				E4F4D2D51D7530640078B991 /* tabbar_message_center@2x.png in Resources */,
+				E438A3C91D76B8360009978A /* HZProfileSildeView.xib in Resources */,
 				E4F4D2D11D7530640078B991 /* nav_close_icon@3x.png in Resources */,
+				E438A3CB1D76B9610009978A /* e29hz.png in Resources */,
 				E4F4D2D21D7530640078B991 /* tabbar_compose_icon_add_highlighted@2x.png in Resources */,
+				E438A3CD1D76BAFC0009978A /* in_icon@2x.png in Resources */,
 				E4F4D2D71D7530640078B991 /* Wyue-GutiFangsong-NC_deliverable.otf in Resources */,
 				E4F4D2F91D7579D20078B991 /* meipai@2x.png in Resources */,
 				E4F4D2FE1D7579D20078B991 /* wechat@2x.png in Resources */,
@@ -298,10 +325,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E438A3D31D76CC100009978A /* UIView+Extension.m in Sources */,
 				E4F4D2DD1D7535300078B991 /* HZMyProjectsViewController.m in Sources */,
 				E4F4D2CF1D7530640078B991 /* HZTabBarController.m in Sources */,
 				E4BDCD6A1D75287900973854 /* AppDelegate.m in Sources */,
+				E438A3D01D76CAA50009978A /* HZTabBar.m in Sources */,
 				E4BDCD671D75287900973854 /* main.m in Sources */,
+				E438A3C71D76B8190009978A /* HZProfileSlideView.m in Sources */,
 				E4F4D2DA1D7535100078B991 /* HZLaunchPadViewController.m in Sources */,
 				E4F4D2E61D75666D0078B991 /* HZLanuchCollectionViewCell.m in Sources */,
 			);

@@ -38,7 +38,7 @@ UICollectionViewDelegateFlowLayout
                         @"wechat",
                         @"wechattimeline"];
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 60, 30)];
-    self.titleLabel.font = [UIFont boldSystemFontOfSize:18];
+    self.titleLabel.font = [UIFont boldSystemFontOfSize:14];
     self.titleLabel.text = @"LAUNCHPAD";
     self.navigationItem.titleView = self.titleLabel;
     //1.初始化layout
@@ -59,17 +59,15 @@ UICollectionViewDelegateFlowLayout
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
+    self.navigationItem.titleView.hidden = NO;
     self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
-                         self.navigationItem.titleView.transform = CGAffineTransformMakeTranslation(-10, 0);
-    [UIView animateWithDuration:0.5
-                          delay:0
-                        options:UIViewAnimationOptionCurveEaseInOut
-                     animations:^{
-                         self.navigationItem.titleView.transform = CGAffineTransformMakeTranslation(0, 0);
-                     } completion:^(BOOL finished) {
-                         
-                     }];
     [self collectionViewDisplayCellAnimaition];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    self.navigationItem.titleView.hidden = YES;
 }
 
 - (void)collectionViewDisplayCellAnimaition {
@@ -77,10 +75,10 @@ UICollectionViewDelegateFlowLayout
         HZLanuchCollectionViewCell *cell = self.collectionView.visibleCells[i];
         CGFloat cellY = cell.frame.origin.y;
         int rowCount = (int)((cellY - 30) / 130);
-        cell.transform = CGAffineTransformMakeTranslation(0, rowCount * 30);
+        cell.transform = CGAffineTransformMakeTranslation(0, rowCount * 15);
         
         [UIView animateWithDuration:0.7
-                              delay:0
+                              delay:rowCount * 0.1
                             options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{
                              cell.transform = CGAffineTransformMakeTranslation(0, 0);
@@ -93,9 +91,11 @@ UICollectionViewDelegateFlowLayout
     return self.imageArray.count;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    HZLanuchCollectionViewCell *cell = (HZLanuchCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"invision"
-                                                                                                               forIndexPath:indexPath];
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
+                  cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    HZLanuchCollectionViewCell *cell = (HZLanuchCollectionViewCell *)[collectionView
+                                                                      dequeueReusableCellWithReuseIdentifier:@"invision"
+                                                                                                forIndexPath:indexPath];
     [cell.imageView setImage:[UIImage imageNamed:self.imageArray[indexPath.row]]];
     cell.titleLabel.text = self.imageArray[indexPath.row];
     return cell;
@@ -108,7 +108,9 @@ UICollectionViewDelegateFlowLayout
     return CGSizeMake(100, 100);
 }
 
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView
+                        layout:(UICollectionViewLayout *)collectionViewLayout
+        insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(30, 30, 30, 30);
 }
 
@@ -127,18 +129,18 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
     return 30;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+- (void)collectionView:(UICollectionView *)collectionView
+       willDisplayCell:(UICollectionViewCell *)cell
+    forItemAtIndexPath:(NSIndexPath *)indexPath {
     int rowCount = (int)(indexPath.row / 3);
-    cell.transform = CGAffineTransformMakeTranslation(0, rowCount * 30);
+    cell.transform = CGAffineTransformMakeTranslation(0, rowCount * 15);
     
     [UIView animateWithDuration:0.7
                           delay:0
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
                          cell.transform = CGAffineTransformMakeTranslation(0, 0);
-                     } completion:^(BOOL finished) {
-                         
-                     }];
+                     } completion:nil];
 }
 
 @end

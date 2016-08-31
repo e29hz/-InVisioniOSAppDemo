@@ -10,4 +10,8 @@
 
 @interface HZProfileSlideView : UIView
 
+@property (nonatomic, strong) IBOutlet UIImageView *avatarImageView;
+
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
+
 @end

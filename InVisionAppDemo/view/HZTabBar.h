@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HZTabBar : UITabBar
+@class HZTabBar;
+@protocol HZTabBarDelegate <NSObject>
 
+@optional
+- (void)tabBarDidClickedProfileButton:(HZTabBar *)tabBar;
+
+@end
+
+@interface HZTabBar : UITabBar
+@property (nonatomic, weak) id<HZTabBarDelegate> tabBarDelegate;
 @end
