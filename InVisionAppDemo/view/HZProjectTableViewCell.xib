@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HZProjectTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="424" height="240"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="424" height="239.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8VK-VT-WS8">
+                        <rect key="frame" x="32" y="18" width="360" height="180"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="340" id="4iy-77-Ymu"/>
+                            <constraint firstAttribute="width" constant="360" id="Chk-dQ-MY1"/>
+                            <constraint firstAttribute="height" constant="180" id="lfT-k3-dq5"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4iy-77-Ymu"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oob-vf-7jI">
+                        <rect key="frame" x="194" y="205.5" width="36" height="16"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="8VK-VT-WS8" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Ggd-P3-cXq"/>
+                    <constraint firstItem="8VK-VT-WS8" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="NfA-Ke-fdR"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Oob-vf-7jI" secondAttribute="bottom" constant="10" id="QRp-Fx-Xdl"/>
+                    <constraint firstItem="Oob-vf-7jI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="UfQ-au-ZsI"/>
+                    <constraint firstItem="8VK-VT-WS8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="VHe-7q-eXm"/>
+                    <constraint firstItem="Oob-vf-7jI" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="h89-Vr-w2U"/>
+                    <constraint firstItem="8VK-VT-WS8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="lRE-Fe-w88"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="8VK-VT-WS8" secondAttribute="trailing" constant="20" id="llC-vk-7mE"/>
+                    <constraint firstItem="Oob-vf-7jI" firstAttribute="top" secondItem="8VK-VT-WS8" secondAttribute="bottom" constant="15" id="sIk-6d-4Wr"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Ggd-P3-cXq"/>
+                        <exclude reference="lRE-Fe-w88"/>
+                        <exclude reference="llC-vk-7mE"/>
+                        <exclude reference="UfQ-au-ZsI"/>
+                        <exclude reference="sIk-6d-4Wr"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="coverImageView" destination="8VK-VT-WS8" id="F1p-pq-YY0"/>
+                <outlet property="detailLabel" destination="Oob-vf-7jI" id="VrQ-MG-gwg"/>
+            </connections>
+            <point key="canvasLocation" x="502" y="340"/>
+        </tableViewCell>
+    </objects>
+</document>
