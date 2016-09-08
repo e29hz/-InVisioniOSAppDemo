@@ -121,7 +121,7 @@
     for (UITableViewCell *cell in self.profileSlideView.tableView.visibleCells) {
         cell.transform = CGAffineTransformMakeTranslation(cell.tag * 25, 0);
 
-        [UIView animateWithDuration:0.7
+        [UIView animateWithDuration:0.6
                               delay:0.2
                             options:UIViewAnimationOptionCurveEaseInOut
                          animations:^{

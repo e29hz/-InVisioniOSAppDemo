@@ -50,17 +50,17 @@
 {
     [super layoutSubviews];
     
-    // 设置plusButton的frame
-    [self setupPlusButtonFrame];
+    // 设置ProfileButto的frame
+    [self setupProfileButtonFrame];
     
     // 设置所有tabbarButton的frame
     [self setupAllTabBarButtonsFrame];
 }
 
 /**
- *  设置所有plusButton的frame
+ *  设置所有ProfileButto的frame
  */
-- (void)setupPlusButtonFrame {
+- (void)setupProfileButtonFrame {
     self.profileButton.size = self.profileButton.currentBackgroundImage.size;
     self.profileButton.center = CGPointMake(self.width / 5 * 4.5, self.height * 0.5);
 }
